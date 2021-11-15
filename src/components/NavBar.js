@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div>
+    <nav>
       <NavLink to="/">Current Bag</NavLink>
       <NavLink to="/allbags">All Bags</NavLink>
-    </div>
+    </nav>
   );
 }
 
