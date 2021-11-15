@@ -1,3 +1,4 @@
+import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Welcome from "./Welcome";
 import CurrentBag from "./CurrentBag";
@@ -9,8 +10,20 @@ function App() {
     <div className="App">
       <h1>Bag Packer</h1>
       <NavBar />
-      {user ? <CurrentBag /> : <Welcome />}
-      <AllBags />
+      <Switch>
+        {user ? (
+          <Route exact path="/">
+            <CurrentBag />
+          </Route>
+        ) : (
+          <Route exact path="/">
+            <Welcome />
+          </Route>
+        )}
+        <Route path="/allbags">
+          <AllBags />
+        </Route>
+      </Switch>
     </div>
   );
 }
