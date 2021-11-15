@@ -1,0 +1,25 @@
+nav {
+    background-color: cornsilk;
+}
+
+  
+nav a {
+    display: inline-block;
+    margin: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: firebrick;
+    border-bottom: 2px solid firebrick;
+    transition: 0.1s;
+}
+  
+nav a:hover,
+nav a:active {
+    color: tomato;
+    border-bottom: 2px solid tomato;
+}
+  
+nav a.active {
+    background-color: black;
+    color: white;
+}
