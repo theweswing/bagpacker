@@ -48,7 +48,7 @@ function BagCard({
       );
     }
   }
-  return <div>{displayBagContents()}</div>;
+  return <div className="current-bag-view">{displayBagContents()}</div>;
 }
 
 export default BagCard;
