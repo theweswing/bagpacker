@@ -1,10 +1,35 @@
 import {useState} from "react"
 
-function Welcome({setCurrentBag,currentBag,activeItemsBagOne,setActiveItemsBagOne,activeItemsBagTwo,setActiveItemsBagTwo,activeItemsBagThree,setActiveItemsBagThree,activeItemsBagFour,setActiveItemsBagFour,allItemsDaily,setAllItemsDaily,activeItemsDaily,setActiveItemsDaily,allItemsBagOne,setAllItemsBagOne,allItemsBagTwo,setAllItemsBagTwo,allItemsBagThree,setAllItemsBagThree,allItemsBagFour,setAllItemsBagFour,userLoggedIn,setUserLoggedIn}){
+function Welcome({setActiveBag,setActiveUser,setUserLoggedIn,setActiveBagName}){
 
 const [userState,setUserState]=useState({
     name:"",
-    email:""
+    email:"",
+    bag1: "Daily",
+      items1: [
+        "Stuff",
+        "Things"
+      ],
+      bag2: "New Bag",
+      items2: [
+        "Stuff",
+        "Things"
+      ],
+      bag3: "New Bag",
+      items3: [
+        "Stuff",
+        "Things"
+      ],
+      bag4: "New Bag",
+      items4: [
+        "Stuff",
+        "Things"
+      ],
+      bag5: "New Bag",
+      "items5": [
+        "Stuff",
+        "Things"
+      ]
 })
 const[newUser,setNewUser]=useState(true)
 
@@ -13,7 +38,6 @@ function handleReturningUser(e){
 }
 
 let userinDB=false
-
 
 function handleChange(e){
     setUserState({...userState,[e.target.name]:e.target.value})
@@ -34,41 +58,11 @@ function handleLogin(e){
                 setUserLoggedIn(user.id)
     fetch(`http://localhost:3000/users/${user.id}`)
     .then((r) => r.json())
-    .then((data) => console.log(data))
-    fetch(`http://localhost:3000/dailies/${user.id}`)
-    .then((r) => r.json())
     .then((data) => {
-      setAllItemsDaily(data)
-      setActiveItemsDaily(data)
-      setCurrentBag(data)
-    })
-    fetch(`http://localhost:3000/addBagOne/${user.id}`)
-    .then((r) => r.json())
-    .then((data) => {
-      setAllItemsBagOne(data)
-      setActiveItemsBagOne(data)
-
-    })
-    fetch(`http://localhost:3000/addBagTwo/${user.id}`)
-    .then((r) => r.json())
-    .then((data) => {
-      setAllItemsBagTwo(data)
-      setActiveItemsBagTwo(data)
-
-    })
-    fetch(`http://localhost:3000/addBagThree/${user.id}`)
-    .then((r) => r.json())
-    .then((data) => {
-      setAllItemsBagThree(data)
-      setActiveItemsBagThree(data)
-
-    })
-    fetch(`http://localhost:3000/addBagFour/${user.id}`)
-    .then((r) => r.json())
-    .then((data) => {
-      setAllItemsBagFour(data)
-      setActiveItemsBagFour(data)
-
+      console.log(data)
+      setActiveUser(data)
+      setActiveBag(data.items1)
+      setActiveBagName(data.bag1)
     })
             }
         }
@@ -101,82 +95,7 @@ function handleSignUp(e){
               .then((r) => r.json())
               .then((data) => {
                   alert("Welcome to Bagpacker! Your information is in no way secure. Log In to Continue")
-                })
-                fetch('http://localhost:3000/dailies',{
-                    method: "POST",
-                    headers: {
-                        "Content-Type" : "application/json"
-                      },
-                      body: JSON.stringify({
-                        "email":userState.email,
-                        "item1": "",
-                        "item2": "",
-                        "item3": ""
-                        })})
-                  .then((r) => r.json())
-                  .then((data) => {
-                    })
-                    fetch('http://localhost:3000/addBagOne',{
-                        method: "POST",
-                        headers: {
-                            "Content-Type" : "application/json"
-                          },
-                          body: JSON.stringify({
-                            "email":userState.email,
-                            "bagname": "",
-                            "item1": "",
-                            "item2": "",
-                            "item3": ""
-                            })})
-                      .then((r) => r.json())
-                      .then((data) => {
-                        })
-                        fetch('http://localhost:3000/addBagTwo',{
-                        method: "POST",
-                        headers: {
-                            "Content-Type" : "application/json"
-                          },
-                          body: JSON.stringify({
-                            "email":userState.email,
-                            "bagname": "",
-                            "item1": "",
-                            "item2": "",
-                            "item3": ""
-                            })})
-                      .then((r) => r.json())
-                      .then((data) => {
-                        })
-                        fetch('http://localhost:3000/addBagThree',{
-                            method: "POST",
-                            headers: {
-                                "Content-Type" : "application/json"
-                              },
-                              body: JSON.stringify({
-                                "email":userState.email,
-                                "bagname": "",
-                                "item1": "",
-                                "item2": "",
-                                "item3": ""
-                                })})
-                          .then((r) => r.json())
-                          .then((data) => {
-                            })
-                            fetch('http://localhost:3000/addBagFour',{
-                        method: "POST",
-                        headers: {
-                            "Content-Type" : "application/json"
-                          },
-                          body: JSON.stringify({
-                            "email":userState.email,
-                            "bagname": "",
-                            "item1": "",
-                            "item2": "",
-                            "item3": ""
-                            })})
-                      .then((r) => r.json())
-                      .then((data) => {
-                        })
-                        
+                })      
         }
     })
     e.target.reset()

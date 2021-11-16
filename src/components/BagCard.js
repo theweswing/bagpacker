@@ -1,19 +1,30 @@
 import {useState} from "react"
 
-function BagCard({item}){
+function BagCard({bagname,bagitems,bagnum,activeBag,activeBagName,setActiveBag,setActiveBagName,activeUser}){
 
-const [inBag,setInBag]=useState(false)
+    function topThreeItems(){
+        const topThreeItems=bagitems.slice(0,3)
+        const displayThree=topThreeItems.map((givenItem) => {
+            return (<p key={givenItem}>{givenItem}</p>)
+        })
+        return displayThree
+    }
 
-function handlePacked(e){
-    setInBag(!inBag)
-}
-
+    function switchActiveBag(){
+        const newBagLocation=`activeUser.items${bagnum}`
+        console.log(eval(newBagLocation))
+        const newBagName=`activeUser.bag${bagnum}`
+        console.log(eval(newBagName))
+        setActiveBag(eval(newBagLocation))
+        setActiveBagName(eval(newBagName))
+    }
     return (
-        <tr>
-        <td><button>X</button></td>
-        <td>{item}</td>
-        <td>{inBag ? <button onClick={handlePacked}>Packed</button> : <button onClick={handlePacked}>Unpacked</button>}</td>
-        </tr>
+        <div>
+            <h3>{bagname.toUpperCase()}</h3>
+            <h4>Items:</h4>
+            {topThreeItems()}
+            <button onClick={switchActiveBag}>Select Bag</button>
+        </div>
     )
 }
 

@@ -6,36 +6,29 @@ import AllBags from "./AllBags";
 import {useState,useEffect} from "react"
 
 function App() {
-  const [userLoggedIn,setUserLoggedIn]=useState(false)
-  const [allItemsDaily,setAllItemsDaily]=useState([])
-  const [activeItemsDaily,setActiveItemsDaily]=useState([])
-  const [allItemsBagOne,setAllItemsBagOne]=useState([])
-  const [activeItemsBagOne,setActiveItemsBagOne]=useState([])
-  const [allItemsBagTwo,setAllItemsBagTwo]=useState([])
-  const [activeItemsBagTwo,setActiveItemsBagTwo]=useState([])
-  const [allItemsBagThree,setAllItemsBagThree]=useState([])
-  const [activeItemsBagThree,setActiveItemsBagThree]=useState([])
-  const [allItemsBagFour,setAllItemsBagFour]=useState([])
-  const [activeItemsBagFour,setActiveItemsBagFour]=useState([])
-  const [currentBag,setCurrentBag]=useState(allItemsDaily)
+const [activeUser,setActiveUser]=useState("")
+const [userLoggedIn,setUserLoggedIn]=useState(false)
+const [activeBag,setActiveBag]=useState("")
+const [activeBagName,setActiveBagName]=useState("")
 
   return (
     <div className="App">
       <h1>Bag Packer</h1>
-      <NavBar />
+      <q><i>Never Leave Home Without It</i></q>
+      <NavBar userLoggedIn={userLoggedIn} activeBagName={activeBagName} />
 
       <Switch>
         {userLoggedIn ? (
           <Route exact path="/">
-            <CurrentBag currentBag={currentBag} />
+            <CurrentBag setActiveBag={setActiveBag} activeUser={activeUser} activeBag={activeBag} activeBagName={activeBagName} setActiveBagName={setActiveBagName} />
           </Route>
         ) : (
           <Route exact path="/">
-            <Welcome  currentBag={currentBag} setCurrentBag={setCurrentBag} activeItemsBagFour={activeItemsBagFour} setActiveItemsBagFour={setActiveItemsBagFour}  activeItemsBagThree={activeItemsBagThree} setActiveItemsBagThree={setActiveItemsBagThree}  activeItemsBagTwo={activeItemsBagTwo} setActiveItemsBagTwo={setActiveItemsBagTwo}  activeItemsBagOne={activeItemsBagOne} setActiveItemsBagOne={setActiveItemsBagOne} allItemsBagFour={allItemsBagFour} setAllItemsBagFour={setAllItemsBagFour} allItemsBagThree={allItemsBagThree} setAllItemsBagThree={setAllItemsBagThree}  allItemsBagTwo={allItemsBagTwo} setAllItemsBagTwo={setAllItemsBagTwo} allItemsBagOne={allItemsBagOne} setAllItemsBagOne={setAllItemsBagOne} userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn}   allItemsDaily={allItemsDaily} setAllItemsDaily={setAllItemsDaily} activeItemsDaily={activeItemsDaily} setActiveItemsDaily={setActiveItemsDaily} />
+            <Welcome setActiveBag={setActiveBag} setUserLoggedIn={setUserLoggedIn} setActiveUser={setActiveUser} setActiveBagName={setActiveBagName} />
           </Route>
         )}
         <Route path="/allbags">
-          <AllBags />
+          <AllBags activeUser={activeUser} activeBag={activeBag} setActiveBag={setActiveBag} activeBagName={activeBagName} setActiveBagName={setActiveBagName} />
         </Route>
       </Switch>
     </div>

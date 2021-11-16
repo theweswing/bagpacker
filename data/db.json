@@ -3,201 +3,182 @@
     {
       "id": 1,
       "name": "Wes",
-      "email": "wschierenbeck@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "Jean",
-      "email": "jmezalon@gmail.com"
-    },
-    {
-      "name": "Wesley",
-      "email": "wes.schierenbeck@gmail.com",
-      "id": 3
-    },
-    {
-      "name": "Barack Obama",
-      "email": "barryobama@gmail.com",
-      "id": 4
-    },
-    {
-      "name": "Chett",
-      "email": "Chett@chett.com",
-      "id": 5
-    }
-  ],
-  "dailies": [
-    {
-      "id": 1,
       "email": "wschierenbeck@gmail.com",
-      "bagname": "My Daily Bag",
-      "items": [
-        "Given Item",
-        "Another Item"
+      "bag1": "Daily Bag",
+      "items1": [
+        "Stuff",
+        "Things"
+      ],
+      "bag2": "New Bag",
+      "items2": [
+        "Stuff",
+        "Things"
+      ],
+      "bag3": "New Bag",
+      "items3": [
+        "Stuff",
+        "Things"
+      ],
+      "bag4": "New Bag",
+      "items4": [
+        "Stuff",
+        "Things"
+      ],
+      "bag5": "New Bag",
+      "items5": [
+        "Stuff",
+        "Things"
       ]
     },
     {
       "id": 2,
+      "name": "Jean",
       "email": "jmezalon@gmail.com",
-      "bagname": "My Daily Bag",
-      "items": []
-    },
-    {
-      "email": "wes.schierenbeck@gmail.com",
-      "bagname": "My Daily Bag",
-      "items": [
-        "Given Item"
+      "bag1": "Daily Bag",
+      "items1": [
+        "Stuff",
+        "Things"
       ],
-      "id": 3
+      "bag2": "New Bag",
+      "items2": [
+        "Stuff",
+        "Things"
+      ],
+      "bag3": "New Bag",
+      "items3": [
+        "Stuff",
+        "Things"
+      ],
+      "bag4": "New Bag",
+      "items4": [
+        "Stuff",
+        "Things"
+      ],
+      "bag5": "New Bag",
+      "items5": [
+        "Stuff",
+        "Things"
+      ]
     },
     {
-      "email": "barryobama@gmail.com",
-      "bagname": "My Daily Bag",
-      "items": [],
-      "id": 4
-    },
-    {
-      "email": "Chett@chett.com",
-      "item1": "",
-      "item2": "",
-      "item3": "",
-      "id": 5
-    }
-  ],
-  "addBagOne": [
-    {
-      "id": 1,
-      "email": "wschierenbeck@gmail.com",
-      "bagname": "",
-      "items": []
-    },
-    {
-      "id": 2,
-      "email": "jmezalon@gmail.com",
-      "bagname": "",
-      "items": []
-    },
-    {
+      "name": "Wesley",
       "email": "wes.schierenbeck@gmail.com",
-      "bagname": "",
-      "items": [],
-      "id": 3
+      "id": 3,
+      "bag1": "Daily Bag",
+      "items1": [
+        "Stuff",
+        "Things"
+      ],
+      "bag2": "New Bag",
+      "items2": [
+        "Stuff",
+        "Things"
+      ],
+      "bag3": "New Bag",
+      "items3": [
+        "Stuff",
+        "Things"
+      ],
+      "bag4": "New Bag",
+      "items4": [
+        "Stuff",
+        "Things"
+      ],
+      "bag5": "New Bag",
+      "items5": [
+        "Stuff",
+        "Things"
+      ]
     },
     {
+      "name": "Barack Obama",
       "email": "barryobama@gmail.com",
-      "bagname": "",
-      "items": [],
-      "id": 4
+      "id": 4,
+      "bag1": "Daily Bag",
+      "items1": [
+        "Stuff",
+        "Things"
+      ],
+      "bag2": "New Bag",
+      "items2": [
+        "Stuff",
+        "Things"
+      ],
+      "bag3": "New Bag",
+      "items3": [
+        "Stuff",
+        "Things"
+      ],
+      "bag4": "New Bag",
+      "items4": [
+        "Stuff",
+        "Things"
+      ],
+      "bag5": "New Bag",
+      "items5": [
+        "Stuff",
+        "Things"
+      ]
     },
     {
+      "name": "Chett",
       "email": "Chett@chett.com",
-      "bagname": "",
-      "item1": "",
-      "item2": "",
-      "item3": "",
-      "id": 5
-    }
-  ],
-  "addBagTwo": [
-    {
-      "id": 1,
-      "email": "wschierenbeck@gmail.com",
-      "bagname": "",
-      "items": []
+      "id": 5,
+      "bag1": "Daily Bag",
+      "items1": [
+        "Stuff",
+        "Things"
+      ],
+      "bag2": "New Bag",
+      "items2": [
+        "Stuff",
+        "Things"
+      ],
+      "bag3": "New Bag",
+      "items3": [
+        "Stuff",
+        "Things"
+      ],
+      "bag4": "New Bag",
+      "items4": [
+        "Stuff",
+        "Things"
+      ],
+      "bag5": "New Bag",
+      "items5": [
+        "Stuff",
+        "Things"
+      ]
     },
     {
-      "id": 2,
-      "email": "jmezalon@gmail.com",
-      "bagname": "",
-      "items": []
-    },
-    {
-      "email": "wes.schierenbeck@gmail.com",
-      "bagname": "",
-      "items": [],
-      "id": 3
-    },
-    {
-      "email": "barryobama@gmail.com",
-      "bagname": "",
-      "items": [],
-      "id": 4
-    },
-    {
-      "email": "Chett@chett.com",
-      "bagname": "",
-      "item1": "",
-      "item2": "",
-      "item3": "",
-      "id": 5
-    }
-  ],
-  "addBagThree": [
-    {
-      "id": 1,
-      "email": "wschierenbeck@gmail.com",
-      "bagname": "",
-      "items": []
-    },
-    {
-      "id": 2,
-      "email": "jmezalon@gmail.com",
-      "bagname": "",
-      "items": []
-    },
-    {
-      "email": "wes.schierenbeck@gmail.com",
-      "bagname": "",
-      "items": [],
-      "id": 3
-    },
-    {
-      "email": "barryobama@gmail.com",
-      "bagname": "",
-      "items": [],
-      "id": 4
-    },
-    {
-      "email": "Chett@chett.com",
-      "bagname": "",
-      "item1": "",
-      "item2": "",
-      "item3": "",
-      "id": 5
-    }
-  ],
-  "addBagFour": [
-    {
-      "id": 1,
-      "email": "wschierenbeck@gmail.com",
-      "bagname": "",
-      "items": []
-    },
-    {
-      "id": 2,
-      "email": "jmezalon@gmail.com",
-      "bagname": "",
-      "items": []
-    },
-    {
-      "email": "wes.schierenbeck@gmail.com",
-      "bagname": "",
-      "items": [],
-      "id": 3
-    },
-    {
-      "email": "barryobama@gmail.com",
-      "bagname": "",
-      "items": [],
-      "id": 4
-    },
-    {
-      "email": "Chett@chett.com",
-      "bagname": "",
-      "item1": "",
-      "item2": "",
-      "item3": "",
-      "id": 5
+      "name": "Jeff",
+      "email": "jeffgordon@gmail.com",
+      "bag1": "Daily Bag",
+      "items1": [
+        "Stuff",
+        "Things"
+      ],
+      "bag2": "New Bag",
+      "items2": [
+        "Stuff",
+        "Things"
+      ],
+      "bag3": "New Bag",
+      "items3": [
+        "Stuff",
+        "Things"
+      ],
+      "bag4": "New Bag",
+      "items4": [
+        "Stuff",
+        "Things"
+      ],
+      "bag5": "New Bag",
+      "items5": [
+        "Stuff",
+        "Things"
+      ],
+      "id": 6
     }
   ]
 }
