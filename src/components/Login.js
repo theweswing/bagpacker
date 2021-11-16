@@ -53,7 +53,7 @@ function Login({
             fetch(`http://localhost:3000/users/${user.id}`)
               .then((r) => r.json())
               .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setActiveUser(data);
                 setActiveBag(data.items1);
                 setActiveBagName(data.bag1);
@@ -97,11 +97,11 @@ function Login({
                 "Welcome to Bagpacker! Your information is in no way secure."
               );
               //   history.push("/currentbag/" + data.id);
-            handleLogin(e)
+              handleLogin(e);
             });
         }
       });
-      
+
     e.target.reset();
   }
 

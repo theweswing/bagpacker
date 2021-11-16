@@ -1,13 +1,16 @@
-import { NavLink, Switch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function NavBar({ userLoggedIn, activeBagName }) {
+function NavBar({ userLoggedIn, activeBagName, activeUser }) {
   return (
     <div>
       {userLoggedIn ? (
-        <nav>
-          <NavLink to={"/current/" + activeBagName}>{activeBagName}</NavLink>
-          <NavLink to="/allbags">All Bags</NavLink>
-        </nav>
+        <>
+          <p>Hello {activeUser.name}, start packing or add a new bag!</p>
+          <nav>
+            <NavLink to={"/current/" + activeBagName}>{activeBagName}</NavLink>
+            <NavLink to="/allbags">All Bags</NavLink>
+          </nav>
+        </>
       ) : (
         <nav>
           <NavLink
