@@ -11,6 +11,7 @@ function App() {
   const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [activeBag, setActiveBag] = useState("");
   const [activeBagName, setActiveBagName] = useState("");
+  const [activeBagNum,setActiveBagNum]= useState(1)
 
   return (
     <div className="App">
@@ -31,9 +32,11 @@ function App() {
               <CurrentBag
                 setActiveBag={setActiveBag}
                 activeUser={activeUser}
+                setActiveUser={setActiveUser}
                 activeBag={activeBag}
                 activeBagName={activeBagName}
                 setActiveBagName={setActiveBagName}
+                activeBagNum={activeBagNum}
               />
             </Route>
             <Route exact path="/allbags">
@@ -43,6 +46,7 @@ function App() {
                 setActiveBag={setActiveBag}
                 activeBagName={activeBagName}
                 setActiveBagName={setActiveBagName}
+                setActiveBagNum={setActiveBagNum}
               />
             </Route>
           </Switch>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function BagCard({
+  setActiveBagNum,
   bagname,
   bagitems,
   bagnum,
@@ -25,15 +26,29 @@ function BagCard({
     console.log(eval(newBagName));
     setActiveBag(eval(newBagLocation));
     setActiveBagName(eval(newBagName));
+    setActiveBagNum(bagnum);
+    console.log(bagnum);
   }
-  return (
-    <div className="bag-card">
-      <h3>{bagname.toUpperCase()}</h3>
-      <h4>Items:</h4>
-      {topThreeItems()}
-      <button onClick={switchActiveBag}>Select Bag</button>
-    </div>
-  );
+
+  function displayBagContents() {
+    if (bagname !== "New Bag") {
+      return (
+        <div>
+          <h3>{bagname.toUpperCase()}</h3>
+          <button onClick={switchActiveBag}>Select Bag</button>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <br></br>
+          <br></br>
+          <button onClick={switchActiveBag}>Add New Bag</button>
+        </div>
+      );
+    }
+  }
+  return <div>{displayBagContents()}</div>;
 }
 
 export default BagCard;

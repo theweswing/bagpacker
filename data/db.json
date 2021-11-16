@@ -4,22 +4,30 @@
       "id": 1,
       "name": "Wes",
       "email": "wschierenbeck@gmail.com",
-      "bag1": "Daily Bag",
+      "bag1": "Daily Flatiron",
       "items1": [
-        "Stuff",
-        "Things"
+        "Laptop",
+        "Laptop Charger",
+        "Phone Charger",
+        "Phone Stand",
+        "India: A History",
+        "Packed Lunch",
+        "Workbook",
+        "Notebook 1",
+        "Notebook 2",
+        "Yoga Clothes"
       ],
-      "bag2": "New Bag",
+      "bag2": "Basketball",
       "items2": [
         "Stuff",
         "Things"
       ],
-      "bag3": "New Bag",
+      "bag3": "Kent",
       "items3": [
         "Stuff",
         "Things"
       ],
-      "bag4": "New Bag",
+      "bag4": "Overnight Girlfriend",
       "items4": [
         "Stuff",
         "Things"
@@ -419,6 +427,33 @@
         "Things"
       ],
       "id": 14
+    },
+    {
+      "name": "Bernie Sanders",
+      "email": "berniesanders@gmail.com",
+      "bag1": "Daily",
+      "items1": [
+        "Stuff",
+        "Things"
+      ],
+      "bag2": "New Bag",
+      "items2": [],
+      "bag3": "New Bag",
+      "items3": [
+        "Stuff",
+        "Things"
+      ],
+      "bag4": "New Bag",
+      "items4": [
+        "Stuff",
+        "Things"
+      ],
+      "bag5": "New Bag",
+      "items5": [
+        "Stuff",
+        "Things"
+      ],
+      "id": 15
     }
   ]
 }

@@ -7,10 +7,12 @@ function AllBags({
   activeBag,
   setActiveBag,
   activeUser,
+  setActiveBagNum,
 }) {
   return (
-    <div className="bag-container">
+    <div>
       <BagCard
+        setActiveBagNum={setActiveBagNum}
         bagname={activeUser.bag1}
         bagitems={activeUser.items1}
         bagnum={1}
@@ -21,6 +23,7 @@ function AllBags({
         activeUser={activeUser}
       />
       <BagCard
+        setActiveBagNum={setActiveBagNum}
         bagname={activeUser.bag2}
         bagitems={activeUser.items2}
         bagnum={2}
@@ -31,6 +34,7 @@ function AllBags({
         activeUser={activeUser}
       />
       <BagCard
+        setActiveBagNum={setActiveBagNum}
         bagname={activeUser.bag3}
         bagitems={activeUser.items3}
         bagnum={3}
@@ -41,6 +45,7 @@ function AllBags({
         activeUser={activeUser}
       />
       <BagCard
+        setActiveBagNum={setActiveBagNum}
         bagname={activeUser.bag4}
         bagitems={activeUser.items4}
         bagnum={4}
@@ -51,6 +56,7 @@ function AllBags({
         activeUser={activeUser}
       />
       <BagCard
+        setActiveBagNum={setActiveBagNum}
         bagname={activeUser.bag5}
         bagitems={activeUser.items5}
         bagnum={5}

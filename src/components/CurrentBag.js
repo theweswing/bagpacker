@@ -3,6 +3,8 @@ import AddItemForm from "./AddItemForm";
 import { useState } from "react";
 
 function CurrentBag({
+  setActiveUser,
+  activeBagNum,
   setActiveBag,
   activeBag,
   activeUser,
@@ -20,6 +22,9 @@ function CurrentBag({
       const itemsToDisplay = bagItems.map((givenItem) => {
         return (
           <ItemCard
+            activeBagNum={activeBagNum}
+            activeUser={activeUser}
+            setActiveUser={setActiveUser}
             item={givenItem}
             key={givenItem}
             activeBag={activeBag}
@@ -47,6 +52,26 @@ function CurrentBag({
     e.preventDefault();
     setActiveBagName(newBagName);
     setRenamedBag(!renamedBag);
+    console.log(activeBagNum);
+    const currentBagNameLocation = `bag${activeBagNum}`;
+    const activeUserID = activeUser.id;
+    console.log(currentBagNameLocation);
+    console.log(activeUserID);
+    fetch(`http://localhost:3000/users/${activeUserID}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        [currentBagNameLocation]: newBagName,
+      }),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        fetch(`http://localhost:3000/users/${activeUserID}`)
+          .then((r) => r.json())
+          .then((data) => setActiveUser(data));
+      });
   }
 
   return (
@@ -74,13 +99,16 @@ function CurrentBag({
             <th>In Bag?</th>
           </tr>
         </thead>
+
         <tbody>{spawnCards()}</tbody>
       </table>
       <br></br>
       <br></br>
       <AddItemForm
+        activeBagNum={activeBagNum}
         setActiveBag={setActiveBag}
         activeUser={activeUser}
+        setActiveUser={setActiveUser}
         activeBag={activeBag}
         activeBagName={activeBagName}
       />
