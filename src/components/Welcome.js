@@ -9,7 +9,7 @@ function Welcome() {
         Bagpacker!
       </p>
       <Link to={"/login"}>
-        <button>Sign Up</button>
+        <button>Sign Up or Sign In</button>
       </Link>
     </div>
   );

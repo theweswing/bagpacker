@@ -47,7 +47,7 @@ function Login({
           if (
             user.email.toLowerCase().includes(userState.email.toLowerCase())
           ) {
-            alert(`Welcome back, ${user.name}!`);
+            alert(`Start packing, ${user.name}!`);
             counter = counter + 1;
             setUserLoggedIn(user.id);
             fetch(`http://localhost:3000/users/${user.id}`)
@@ -94,12 +94,14 @@ function Login({
             .then((r) => r.json())
             .then((data) => {
               alert(
-                "Welcome to Bagpacker! Your information is in no way secure. Log In to Continue"
+                "Welcome to Bagpacker! Your information is in no way secure."
               );
               //   history.push("/currentbag/" + data.id);
+            handleLogin(e)
             });
         }
       });
+      
     e.target.reset();
   }
 

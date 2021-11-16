@@ -17,7 +17,7 @@ function CurrentBag({setActiveBag,activeBag,activeUser,activeBagName,setActiveBa
     })
     return itemsToDisplay}
     if (bagItems.length===0){
-      return (<p>Put some stuff in your bag!</p>)
+      return (<tr>Put some stuff in your bag!</tr>)
     }
   }
 
@@ -39,21 +39,25 @@ function CurrentBag({setActiveBag,activeBag,activeUser,activeBagName,setActiveBa
   return (
     <div>
       <h3 className="displayedactivebagname" id={activeBagName}>{activeBagName.toUpperCase()} <button onClick={triggerRename}>✎</button></h3>
-      <table>
-        <tr>
-          <th></th>
-          <th>Item</th>
-          <th>In Bag?</th>
-        </tr>
-        {spawnCards()}
-        </table><br></br><br></br>
-        <AddItemForm setActiveBag={setActiveBag} activeUser={activeUser} activeBag={activeBag} activeBagName={activeBagName} />
-        {renamedBag? (
+      {renamedBag? (
           <form onSubmit={handleNameChange}>
             <input onChange={handleChange} type="text" placeholder="New Bag Name"></input>
             <button type="submit">Change Bag Name</button>
           </form>
         ) : null }
+      <table>
+        <thead>
+        <tr>
+          <th></th>
+          <th>Item</th>
+          <th>In Bag?</th>
+        </tr>
+        </thead>
+        <tbody>
+        {spawnCards()}
+        </tbody>
+        </table><br></br><br></br>
+        <AddItemForm setActiveBag={setActiveBag} activeUser={activeUser} activeBag={activeBag} activeBagName={activeBagName} />
     </div>
   );
 }
