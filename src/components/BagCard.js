@@ -26,8 +26,6 @@ function BagCard({setActiveBagNum,bagname,bagitems,bagnum,activeBag,activeBagNam
             return (
                 <div>
                     <h3>{bagname.toUpperCase()}</h3>
-                    <h4>Items:</h4>
-                    {topThreeItems()}
                     <button onClick={switchActiveBag}>Select Bag</button>
                 </div>
             )
