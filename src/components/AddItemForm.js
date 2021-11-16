@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-function AddItemForm({activeBag,activeUser,activeBagName,setActiveBag}){
+function AddItemForm({activeBag,activeUser,setActiveUser,activeBagName,setActiveBag,activeBagNum}){
     const [newItem,setNewItem]=useState("")
 
     function handleChange(e){
@@ -10,8 +10,26 @@ function AddItemForm({activeBag,activeUser,activeBagName,setActiveBag}){
 
     function handleSubmit(e){
         e.preventDefault()
-        setActiveBag([...activeBag,newItem])
         console.log(activeBag)
+        const currentItemsLocation=`items${activeBagNum}`
+        const activeUserID=activeUser.id
+        fetch(`http://localhost:3000/users/${activeUserID}`,{
+      method: "PATCH",
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify({
+        [currentItemsLocation]:[...activeBag,newItem]
+      })
+    })
+    .then((r) => r.json())
+    .then((data) => {
+      fetch(`http://localhost:3000/users/${activeUserID}`)
+      .then((r) => r.json())
+      .then((data) => {
+          setActiveUser(data)
+          setActiveBag([...activeBag,newItem])})
+    })
         e.target.reset()
     }
     return (

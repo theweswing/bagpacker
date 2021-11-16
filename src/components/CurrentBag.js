@@ -2,7 +2,7 @@ import ItemCard from "./ItemCard";
 import AddItemForm from "./AddItemForm";
 import {useState} from "react"
 
-function CurrentBag({setActiveBag,activeBag,activeUser,activeBagName,setActiveBagName}) {
+function CurrentBag({setActiveUser,activeBagNum,setActiveBag,activeBag,activeUser,activeBagName,setActiveBagName}) {
 
   const [renamedBag,setRenamedBag]=useState(false)
   const [newBagName,setNewBagName]=useState("")
@@ -13,7 +13,7 @@ function CurrentBag({setActiveBag,activeBag,activeUser,activeBagName,setActiveBa
     console.log(bagItems)
     if (bagItems.length>0){
     const itemsToDisplay=bagItems.map((givenItem) =>{
-      return ( <ItemCard item={givenItem} key={givenItem} activeBag={activeBag} setActiveBag={setActiveBag} /> )
+      return ( <ItemCard activeBagNum={activeBagNum} activeUser={activeUser} setActiveUser={setActiveUser} item={givenItem} key={givenItem} activeBag={activeBag} setActiveBag={setActiveBag} /> )
     })
     return itemsToDisplay}
     if (bagItems.length===0){
@@ -34,6 +34,26 @@ function CurrentBag({setActiveBag,activeBag,activeUser,activeBagName,setActiveBa
     e.preventDefault()
     setActiveBagName(newBagName)
     setRenamedBag(!renamedBag)
+    console.log(activeBagNum)
+    const currentBagNameLocation=`bag${activeBagNum}`
+    const activeUserID=activeUser.id
+    console.log(currentBagNameLocation)
+    console.log(activeUserID)
+    fetch(`http://localhost:3000/users/${activeUserID}`,{
+      method: "PATCH",
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify({
+        [currentBagNameLocation]:newBagName
+      })
+    })
+    .then((r) => r.json())
+    .then((data) => {
+      fetch(`http://localhost:3000/users/${activeUserID}`)
+      .then((r) => r.json())
+      .then((data) => setActiveUser(data))
+    })
   }
 
   return (
@@ -57,7 +77,7 @@ function CurrentBag({setActiveBag,activeBag,activeUser,activeBagName,setActiveBa
         {spawnCards()}
         </tbody>
         </table><br></br><br></br>
-        <AddItemForm setActiveBag={setActiveBag} activeUser={activeUser} activeBag={activeBag} activeBagName={activeBagName} />
+        <AddItemForm activeBagNum={activeBagNum} setActiveBag={setActiveBag} activeUser={activeUser} setActiveUser={setActiveUser} activeBag={activeBag} activeBagName={activeBagName} />
     </div>
   );
 }
