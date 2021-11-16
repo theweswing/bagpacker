@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function BagCard({
   setActiveBagNum,
@@ -35,7 +36,9 @@ function BagCard({
       return (
         <div>
           <h3>{bagname.toUpperCase()}</h3>
-          <button onClick={switchActiveBag}>Select Bag</button>
+          <Link to={`/current/${bagname}`}>
+            <button onClick={switchActiveBag}>Select Bag</button>
+          </Link>
         </div>
       );
     } else {
@@ -43,7 +46,9 @@ function BagCard({
         <div>
           <br></br>
           <br></br>
-          <button onClick={switchActiveBag}>Add New Bag</button>
+          <Link to={`/current/${bagname}`}>
+            <button onClick={switchActiveBag}>Add New Bag</button>
+          </Link>
         </div>
       );
     }

@@ -11,7 +11,7 @@ function App() {
   const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [activeBag, setActiveBag] = useState("");
   const [activeBagName, setActiveBagName] = useState("");
-  const [activeBagNum,setActiveBagNum]= useState(1)
+  const [activeBagNum, setActiveBagNum] = useState(1);
 
   return (
     <div className="App">
@@ -20,12 +20,17 @@ function App() {
         <i>Never Leave Home Without It</i>
       </q>
       {userLoggedIn && (
-        <NavBar userLoggedIn={userLoggedIn} activeBagName={activeBagName} />
+        <NavBar
+          userLoggedIn={userLoggedIn}
+          activeUser={activeUser}
+          activeBagName={activeBagName}
+        />
       )}
       <Switch>
         <Route exact path="/">
           <Welcome />
         </Route>
+
         {userLoggedIn && (
           <Switch>
             <Route exact path="/current/:bag">

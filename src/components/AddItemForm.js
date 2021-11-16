@@ -42,7 +42,7 @@ function AddItemForm({
   }
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="add-item-form" onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
           type="text"
