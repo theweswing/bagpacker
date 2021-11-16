@@ -23,3 +23,44 @@ nav a.active {
     background-color: black;
     color: white;
 }
+
+#bag-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.bag-card {
+
+}
+
+.current-bag-view {
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#item-row {
+    padding-right: 150px;
+    padding-bottom: 15px;
+}
+
+hr {
+    width: 300px;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+tbody tr td {
+    padding-bottom: 10px;
+}
+
+.add-item-form {
+    padding-bottom: 15px;
+}
