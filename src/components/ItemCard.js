@@ -1,36 +1,43 @@
-import {useState} from "react"
+import { useState } from "react";
 
-function ItemCard({item,activeBag,setActiveBag,activeBagNum,activeUser,setActiveUser}){
+function ItemCard({
+  item,
+  activeBag,
+  setActiveBag,
+  activeBagNum,
+  activeUser,
+  setActiveUser,
+}) {
+  const [inBag, setInBag] = useState(false);
 
-const [inBag,setInBag]=useState(false)
+  function handlePacked(e) {
+    setInBag(!inBag);
+  }
 
-function handlePacked(e){
-    setInBag(!inBag)
-}
-
-function handleDelete(e){
-    const bagMinusDelete=[...activeBag].filter((givenItem) => {
-        return (givenItem !==item)
-    })
-    setActiveBag(bagMinusDelete)
-    const currentItemsLocation=`items${activeBagNum}`
-    const activeUserID=activeUser.id
-    fetch(`http://localhost:3000/users/${activeUserID}`,{
+  function handleDelete(e) {
+    const bagMinusDelete = [...activeBag].filter((givenItem) => {
+      return givenItem !== item;
+    });
+    setActiveBag(bagMinusDelete);
+    const currentItemsLocation = `items${activeBagNum}`;
+    const activeUserID = activeUser.id;
+    fetch(`http://localhost:3000/users/${activeUserID}`, {
       method: "PATCH",
       headers: {
-        'Content-Type':'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        [currentItemsLocation]:bagMinusDelete
-      })
+        [currentItemsLocation]: bagMinusDelete,
+      }),
     })
-    .then((r) => r.json())
-    .then((data) => {
-      fetch(`http://localhost:3000/users/${activeUserID}`)
       .then((r) => r.json())
-      .then((data) => setActiveUser(data))
-    })
-}
+      .then((data) => {
+        fetch(`http://localhost:3000/users/${activeUserID}`)
+          .then((r) => r.json())
+          .then((data) => setActiveUser(data));
+      });
+  }
+
 
     return (
         <tr>
@@ -41,4 +48,4 @@ function handleDelete(e){
     )
 }
 
-export default ItemCard
+export default ItemCard;
