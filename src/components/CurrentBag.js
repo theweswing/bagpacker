@@ -93,9 +93,9 @@ function CurrentBag({
       <table>
         <thead>
           <tr>
-            <th></th>
             <th id="item-row">Item</th>
-            <th>In Bag?</th>
+            <th>In Bag</th>
+            <th>Remove</th>
           </tr>
         </thead>
 

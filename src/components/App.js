@@ -15,10 +15,12 @@ function App() {
 
   return (
     <div className="App">
+      <div id="appHeader">
       <h1>Bag Packer</h1>
       <q>
         <i>Never Leave Home Without It</i>
       </q>
+      </div>
       {userLoggedIn && (
         <NavBar
           userLoggedIn={userLoggedIn}

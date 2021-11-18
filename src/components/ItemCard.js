@@ -38,21 +38,14 @@ function ItemCard({
       });
   }
 
-  return (
-    <tr>
-      <td>
-        <button onClick={handleDelete}>♺</button>
-      </td>
-      <td>{item}</td>
-      <td>
-        {inBag ? (
-          <button onClick={handlePacked}>Packed</button>
-        ) : (
-          <button onClick={handlePacked}>Unpacked</button>
-        )}
-      </td>
-    </tr>
-  );
+
+    return (
+        <tr>
+        <td>{item}</td>
+        <td><input type="checkbox" id={`${item}checkbox`} /></td>
+        <td><button onClick={handleDelete}>🗑</button></td>
+        </tr>
+    )
 }
 
 export default ItemCard;

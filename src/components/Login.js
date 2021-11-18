@@ -106,7 +106,7 @@ function Login({
   }
 
   return (
-    <div>
+    <div id="loginPage">
       {newUser ? (
         <div>
           <h3>New To Bagpacker?</h3>
