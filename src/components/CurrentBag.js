@@ -95,11 +95,11 @@ function CurrentBag({
           <tr>
             <th id="item-row">Item</th>
             <th>In Bag</th>
-            <th>Remove</th>
+            <th id="remove-row">Remove</th>
           </tr>
         </thead>
 
-        <tbody>{spawnCards()}</tbody>
+        <tbody className="current-bag-body">{spawnCards()}</tbody>
       </table>
       <br></br>
       <br></br>

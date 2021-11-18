@@ -53,7 +53,6 @@ nav a.active {
 
 #item-row {
     padding-right: 150px;
-    padding-bottom: 15px;
 }
 
 hr {
@@ -89,6 +88,19 @@ button {
     padding-left: 5px;
     padding-right: 5px;
 }
+
+#remove-row {
+    padding-left: 15px;
+}
+
+.current-bag-body tr td:last-child {
+    padding-left: 30px;
+}
+
+.current-bag-body tr td input {
+    margin-left: 15px
+}
+
 
 /* Wes CSS for Header, Welcome, Sign Up */
 

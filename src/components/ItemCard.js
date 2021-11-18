@@ -38,14 +38,17 @@ function ItemCard({
       });
   }
 
-
-    return (
-        <tr>
-        <td>{item}</td>
-        <td><input type="checkbox" id={`${item}checkbox`} /></td>
-        <td><button onClick={handleDelete}>🗑</button></td>
-        </tr>
-    )
+  return (
+    <tr>
+      <td>{item}</td>
+      <td>
+        <input type="checkbox" id={`${item}checkbox`} />
+      </td>
+      <td>
+        <button onClick={handleDelete}>♺</button>
+      </td>
+    </tr>
+  );
 }
 
 export default ItemCard;
