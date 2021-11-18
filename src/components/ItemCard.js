@@ -42,7 +42,7 @@ function ItemCard({
     <tr>
       <td>{item}</td>
       <td>
-        <input type="checkbox" id={`${item}checkbox`} />
+        <input className="checkbox" type="checkbox" id={`${item}checkbox`} />
       </td>
       <td>
         <button onClick={handleDelete}>♺</button>

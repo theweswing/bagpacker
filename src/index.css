@@ -91,6 +91,11 @@ tbody tr td {
 body {
     background-color: #700000;
     color: white;
+    font-family: Poppins;
+}
+
+button {
+    font-family: Poppins;
 }
 
 button {
@@ -155,17 +160,11 @@ button {
     margin: auto;
 }
 
-@font-face {
-    font-family: 'FenwayRegular';
-  src: local('FenwayRegular'), url(./Fenway-Regular.ttf) format('truetype');
+.checkbox {
+    accent-color: #700000;
 }
 
 @font-face {
-    font-family: 'FenwaySans';
-  src: local('FenwaySans'), url(./Fenway-Sans.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'FenwayVintage';
-  src: local('FenwayVintage'), url(./Fenway-Vintage.ttf) format('truetype');
+    font-family: 'Poppins';
+  src: local('Poppins'), url(./Poppins-ExtraLight.ttf) format('truetype');
 }
