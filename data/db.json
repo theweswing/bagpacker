@@ -169,6 +169,37 @@
         "Things"
       ],
       "id": 5
+    },
+    {
+      "name": "Mei Ling",
+      "email": "meilingluvgreendot@gmail.com",
+      "bag1": "Daily",
+      "items1": [
+        "Coffee",
+        "Weed",
+        "Vodka"
+      ],
+      "bag2": "Vacation",
+      "items2": [
+        "Beach Towel",
+        "Bathing Suit",
+        "Coffee",
+        "Weed",
+        "Vodka"
+      ],
+      "bag3": "Beach House",
+      "items3": [
+        "Stuff",
+        "Things"
+      ],
+      "bag4": "Germany",
+      "items4": [
+        "Stuff",
+        "Things"
+      ],
+      "bag5": "France",
+      "items5": [],
+      "id": 6
     }
   ]
 }
