@@ -7,6 +7,7 @@ function BagCard({
   bagnum,
   setActiveBag,
   setActiveBagName,
+  activeUser,
 }) {
   // function topThreeItems() {
   //   const topThreeItems = bagitems.slice(0, 3);

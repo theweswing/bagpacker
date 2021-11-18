@@ -52,6 +52,10 @@ nav a.active {
     background-color: #A85B21;
 }
 
+div.current-bag-view div {
+    text-align: center;
+}
+
 
 #item-row {
     padding-right: 150px;
