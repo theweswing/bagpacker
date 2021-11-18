@@ -120,9 +120,9 @@ function Login({
             <input onChange={handleChange} type="email" name="email"></input>
             <br></br>
             <br></br>
-            <button type="submit">Sign Up!</button>
+            <button className="welcomebuttons" type="submit">Sign Up!</button>
           </form>
-          <button onClick={handleReturningUser}>
+          <button className="welcomebuttons" onClick={handleReturningUser}>
             I Already Have An Account
           </button>
         </div>
@@ -139,9 +139,9 @@ function Login({
             <input onChange={handleChange} type="email" name="email"></input>
             <br></br>
             <br></br>
-            <button type="submit">Log In!</button>
-          </form>
-          <button onClick={handleReturningUser}>
+            <button className="welcomebuttons" type="submit">Log In!</button>
+          </form><br></br>
+          <button className="welcomebuttons" onClick={handleReturningUser}>
             Wait, I don't have an account actually
           </button>
         </div>

@@ -11,7 +11,7 @@ function AllBags({
 }) {
   return (
     <>
-      <h3>Add up to 5 bags!</h3>
+      <h3 id="addBags">Add up to 5 bags!</h3>
       <div id="bag-container">
         <BagCard
           setActiveBagNum={setActiveBagNum}

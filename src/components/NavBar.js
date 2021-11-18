@@ -5,7 +5,7 @@ function NavBar({ userLoggedIn, activeBagName, activeUser }) {
     <div>
       {userLoggedIn ? (
         <>
-          <p>Hello {activeUser.name}, start packing or add a new bag!</p>
+          <p id="getPacking">Get packing, {activeUser.name}!</p>
           <nav>
             <NavLink to={"/current/" + activeBagName}>{activeBagName}</NavLink>
             <NavLink to="/allbags">All Bags</NavLink>

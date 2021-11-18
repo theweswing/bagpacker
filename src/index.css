@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
+
 nav {
     background-color: #A85B21;
     display: flex;
@@ -107,11 +109,18 @@ button {
 #appHeader {
     text-align: center;
     margin: auto;
-    padding-bottom: 20px;
-    border-bottom: 3px solid black;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid #A85B21;
+}
+
+#appHeader p{
+    font-family: 'Meie Script', cursive;
+    font-size: 150%
 }
 
 #welcomePage {
+    padding-top: 10px;
     text-align: center;
     margin: auto;
 }
@@ -121,4 +130,33 @@ button {
     margin: auto;
 }
 
+.welcomebuttons {
+    background-color: #A85B21;
+    margin: 5px
+}
 
+#getPacking {
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+}
+
+#addBags {
+    text-align: center;
+    margin: auto;
+}
+
+@font-face {
+    font-family: 'FenwayRegular';
+  src: local('FenwayRegular'), url(./Fenway-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'FenwaySans';
+  src: local('FenwaySans'), url(./Fenway-Sans.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'FenwayVintage';
+  src: local('FenwayVintage'), url(./Fenway-Vintage.ttf) format('truetype');
+}
