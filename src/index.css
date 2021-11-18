@@ -65,3 +65,23 @@ tbody tr td {
 .add-item-form {
     padding-bottom: 15px;
 }
+
+/* Wes CSS for Header, Welcome, Sign Up */
+
+#appHeader {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+
+#welcomePage {
+    text-align: center;
+    margin: auto;
+}
+
+#loginPage {
+    text-align: center;
+    margin: auto;
+}
+
