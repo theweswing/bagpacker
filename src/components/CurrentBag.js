@@ -15,9 +15,9 @@ function CurrentBag({
   const [newBagName, setNewBagName] = useState("");
 
   function spawnCards() {
-    console.log(activeBag);
+    // console.log(activeBag);
     const bagItems = [...activeBag];
-    console.log(bagItems);
+    // console.log(bagItems);
     if (bagItems.length > 0) {
       const itemsToDisplay = bagItems.map((givenItem) => {
         return (
@@ -52,11 +52,11 @@ function CurrentBag({
     e.preventDefault();
     setActiveBagName(newBagName);
     setRenamedBag(!renamedBag);
-    console.log(activeBagNum);
+    // console.log(activeBagNum);
     const currentBagNameLocation = `bag${activeBagNum}`;
     const activeUserID = activeUser.id;
-    console.log(currentBagNameLocation);
-    console.log(activeUserID);
+    // console.log(currentBagNameLocation);
+    // console.log(activeUserID);
     fetch(`http://localhost:3000/users/${activeUserID}`, {
       method: "PATCH",
       headers: {

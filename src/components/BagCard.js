@@ -1,34 +1,30 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function BagCard({
   setActiveBagNum,
   bagname,
-  bagitems,
   bagnum,
-  activeBag,
-  activeBagName,
   setActiveBag,
   setActiveBagName,
-  activeUser,
 }) {
-  function topThreeItems() {
-    const topThreeItems = bagitems.slice(0, 3);
-    const displayThree = topThreeItems.map((givenItem) => {
-      return <p key={givenItem}>{givenItem}</p>;
-    });
-    return displayThree;
-  }
+  // function topThreeItems() {
+  //   const topThreeItems = bagitems.slice(0, 3);
+  //   const displayThree = topThreeItems.map((givenItem) => {
+  //     return <p key={givenItem}>{givenItem}</p>;
+  //   });
+  //   return displayThree;
+  // }
 
   function switchActiveBag() {
     const newBagLocation = `activeUser.items${bagnum}`;
-    console.log(eval(newBagLocation));
+    // console.log(eval(newBagLocation));
     const newBagName = `activeUser.bag${bagnum}`;
     console.log(eval(newBagName));
     setActiveBag(eval(newBagLocation));
     setActiveBagName(eval(newBagName));
     setActiveBagNum(bagnum);
-    console.log(bagnum);
+    // console.log(bagnum);
   }
 
   function displayBagContents() {

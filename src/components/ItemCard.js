@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 function ItemCard({
   item,
@@ -8,11 +8,11 @@ function ItemCard({
   activeUser,
   setActiveUser,
 }) {
-  const [inBag, setInBag] = useState(false);
+  // const [inBag, setInBag] = useState(false);
 
-  function handlePacked(e) {
-    setInBag(!inBag);
-  }
+  // function handlePacked(e) {
+  //   setInBag(!inBag);
+  // }
 
   function handleDelete(e) {
     const bagMinusDelete = [...activeBag].filter((givenItem) => {
@@ -31,7 +31,7 @@ function ItemCard({
       }),
     })
       .then((r) => r.json())
-      .then((data) => {
+      .then(() => {
         fetch(`http://localhost:3000/users/${activeUserID}`)
           .then((r) => r.json())
           .then((data) => setActiveUser(data));

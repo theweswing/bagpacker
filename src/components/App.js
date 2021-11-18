@@ -4,7 +4,7 @@ import Welcome from "./Welcome";
 import CurrentBag from "./CurrentBag";
 import AllBags from "./AllBags";
 import Login from "./Login";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function App() {
   const [activeUser, setActiveUser] = useState("");
@@ -16,10 +16,8 @@ function App() {
   return (
     <div className="App">
       <div id="appHeader">
-      <h1>Bag Packer</h1>
-      <p>
-        Never Leave Home Without It
-      </p>
+        <h1>Bag Packer</h1>
+        <p>Never Leave Home Without It</p>
       </div>
       {userLoggedIn && (
         <NavBar

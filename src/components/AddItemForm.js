@@ -4,7 +4,6 @@ function AddItemForm({
   activeBag,
   activeUser,
   setActiveUser,
-  activeBagName,
   setActiveBag,
   activeBagNum,
 }) {
@@ -12,12 +11,12 @@ function AddItemForm({
 
   function handleChange(e) {
     setNewItem(e.target.value);
-    console.log(newItem);
+    // console.log(newItem);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(activeBag);
+    // console.log(activeBag);
     const currentItemsLocation = `items${activeBagNum}`;
     const activeUserID = activeUser.id;
     fetch(`http://localhost:3000/users/${activeUserID}`, {
@@ -30,7 +29,7 @@ function AddItemForm({
       }),
     })
       .then((r) => r.json())
-      .then((data) => {
+      .then(() => {
         fetch(`http://localhost:3000/users/${activeUserID}`)
           .then((r) => r.json())
           .then((data) => {
