@@ -1,3 +1,40 @@
+BAGPACKER:
+
+Have you ever gone somewhere and realize you forgot something?
+Of course you have.
+
+Going on vacation, to the beach or just your daily commute, it's easy to forget an item and spend the rest of the day wishing you hadn't.
+
+You could do what I've done: keep a paper checklist, checking off items as you pack them, to be sure you haven't forgotten anything...
+
+Or you could use Bagpacker! A simple and convenient service:
+
+Sign up and log in with an email address,
+
+Pack up to 5 bags, naming each of them for their purpose,
+
+Add and remove items to your bag's checklist as you see fit,
+
+When it comes time to pack for your trip, simply check each item off as you put it in your bag!
+
+When each item is checked, you know you're good to go! It's as simple as that!
+
+What used to require a pen and paper is now possible on your phone or web browser. The information is retained on a server so no worrying about losing your list or repeating your work.
+
+Please enjoy! 
+
+Bagpacker:
+Never Leave Home Without It
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

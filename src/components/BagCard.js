@@ -21,8 +21,9 @@ function BagCard({
     const newBagLocation = `activeUser.items${bagnum}`;
     // console.log(eval(newBagLocation));
     const newBagName = `activeUser.bag${bagnum}`;
-    console.log(eval(newBagName));
+    // eslint-disable-next-line
     setActiveBag(eval(newBagLocation));
+    // eslint-disable-next-line
     setActiveBagName(eval(newBagName));
     setActiveBagNum(bagnum);
     // console.log(bagnum);
