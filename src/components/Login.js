@@ -38,7 +38,7 @@ function Login({
 
   function handleLogin(e) {
     e.preventDefault();
-    fetch("http://localhost:3000/users")
+    fetch(`${process.env.REACT_APP_API_URL}/users`)
       .then((r) => r.json())
       .then((data) => {
         const userBase = [...data];
@@ -50,7 +50,7 @@ function Login({
             alert(`Start packing, ${user.name}!`);
             counter = counter + 1;
             setUserLoggedIn(user.id);
-            fetch(`http://localhost:3000/users/${user.id}`)
+            fetch(`${process.env.REACT_APP_API_URL}/users/${user.id}`)
               .then((r) => r.json())
               .then((data) => {
                 // console.log(data);
@@ -70,7 +70,7 @@ function Login({
 
   function handleSignUp(e) {
     e.preventDefault();
-    fetch("http://localhost:3000/users")
+    fetch(`${process.env.REACT_APP_API_URL}/users`)
       .then((r) => r.json())
       .then((data) => {
         const userBase = [...data];
@@ -84,7 +84,7 @@ function Login({
           }
         }
         if (userinDB === false) {
-          fetch("http://localhost:3000/users", {
+          fetch(`${process.env.REACT_APP_API_URL}/users`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

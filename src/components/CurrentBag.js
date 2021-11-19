@@ -57,7 +57,7 @@ function CurrentBag({
     const activeUserID = activeUser.id;
     // console.log(currentBagNameLocation);
     // console.log(activeUserID);
-    fetch(`http://localhost:3000/users/${activeUserID}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/users/${activeUserID}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function CurrentBag({
     })
       .then((r) => r.json())
       .then((data) => {
-        fetch(`http://localhost:3000/users/${activeUserID}`)
+        fetch(`${process.env.REACT_APP_API_URL}/users/${activeUserID}`)
           .then((r) => r.json())
           .then((data) => setActiveUser(data));
       });

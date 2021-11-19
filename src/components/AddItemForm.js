@@ -19,7 +19,7 @@ function AddItemForm({
     // console.log(activeBag);
     const currentItemsLocation = `items${activeBagNum}`;
     const activeUserID = activeUser.id;
-    fetch(`http://localhost:3000/users/${activeUserID}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/users/${activeUserID}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ function AddItemForm({
     })
       .then((r) => r.json())
       .then(() => {
-        fetch(`http://localhost:3000/users/${activeUserID}`)
+        fetch(`${process.env.REACT_APP_API_URL}/users/${activeUserID}`)
           .then((r) => r.json())
           .then((data) => {
             setActiveUser(data);
